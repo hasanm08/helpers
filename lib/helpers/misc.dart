@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
 import 'dart:math' as math;
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart' as foundation;
 import 'package:flutter/material.dart';
@@ -122,10 +121,10 @@ class Misc {
   }) async {
     final RenderRepaintBoundary repaintBoundary = RenderRepaintBoundary();
     final PipelineOwner pipelineOwner = PipelineOwner();
-    final Size logicalSize =
-        size ?? ui.window.physicalSize / ui.window.devicePixelRatio;
+    final view = View.of(context!);
+    final Size logicalSize = size ?? view.physicalSize / view.devicePixelRatio;
     final RenderView renderView = RenderView(
-      window: ui.window,
+      view: view,
       child: RenderPositionedBox(child: repaintBoundary),
       configuration: ViewConfiguration(
         size: logicalSize,

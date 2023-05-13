@@ -30,7 +30,7 @@ class BuildColor {
     'https://flutter.dev/docs/release/breaking-changes/theme-data-accent-properties#migration-guide. '
     'This feature was deprecated after v2.3.0-0.1.pre.',
   )
-  Color get accent => Theme.of(_context).accentColor;
+  Color get accent => Theme.of(_context).colorScheme.onBackground;
 
   ///```dart
   ///return Theme.of(context).canvasColor
@@ -106,7 +106,8 @@ class BuildColor {
     'https://flutter.dev/docs/release/breaking-changes/theme-data-accent-properties#migration-guide. '
     'This feature was deprecated after v2.3.0-0.1.pre.',
   )
-  Color get button => Theme.of(_context).buttonColor;
+  Color get button =>
+      Theme.of(_context).buttonTheme.colorScheme?.background ?? Colors.black;
 
   ///```dart
   ///return Theme.of(context).secondaryHeaderColor
@@ -116,7 +117,7 @@ class BuildColor {
   ///```dart
   ///return Theme.of(context).backgroundColor
   ///```
-  Color get background => Theme.of(_context).backgroundColor;
+  Color get background => Theme.of(_context).colorScheme.background;
 
   ///```dart
   ///return Theme.of(context).dialogBackgroundColor
@@ -136,7 +137,7 @@ class BuildColor {
   ///```dart
   ///return Theme.of(context).errorColor
   ///```
-  Color get error => Theme.of(_context).errorColor;
+  Color get error => Theme.of(_context).colorScheme.error;
 
   ///```dart
   ///return Theme.of(context).toggleableActiveColor
