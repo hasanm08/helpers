@@ -82,10 +82,6 @@ class BuildColor {
   ///```
   Color get splash => Theme.of(_context).splashColor;
 
-  ///```dart
-  ///return Theme.of(context).selectedRowColor
-  ///```
-  Color get selectedRow => Theme.of(_context).selectedRowColor;
 
   ///```dart
   ///return Theme.of(context).unselectedWidgetColor
