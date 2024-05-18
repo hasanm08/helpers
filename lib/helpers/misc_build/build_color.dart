@@ -50,7 +50,7 @@ class BuildColor {
   ///```dart
   ///return Theme.of(context).bottomAppBarColor
   ///```
-  Color get bottomAppBar => Theme.of(_context).bottomAppBarColor;
+  Color? get bottomAppBar => Theme.of(_context).bottomAppBarTheme.color;
 
   ///```dart
   ///return Theme.of(context).cardColor
@@ -113,7 +113,7 @@ class BuildColor {
   ///```dart
   ///return Theme.of(context).backgroundColor
   ///```
-  Color get background => Theme.of(_context).colorScheme.background;
+  Color get background => Theme.of(_context).colorScheme.surface;
 
   ///```dart
   ///return Theme.of(context).dialogBackgroundColor
@@ -135,8 +135,4 @@ class BuildColor {
   ///```
   Color get error => Theme.of(_context).colorScheme.error;
 
-  ///```dart
-  ///return Theme.of(context).toggleableActiveColor
-  ///```
-  Color get toggleableActive => Theme.of(_context).toggleableActiveColor;
 }

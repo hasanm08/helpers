@@ -122,12 +122,11 @@ class Headline1 extends StatelessWidget {
         locale: locale,
         softWrap: softWrap,
         overflow: overflow,
-        textScaleFactor: textScaleFactor,
         maxLines: maxLines,
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.headline1!.merge(style));
+        style: context.textTheme.displayLarge!.merge(style));
   }
 }
 
@@ -255,7 +254,7 @@ class Headline2 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.headline2!.merge(style));
+        style: context.textTheme.displayMedium!.merge(style));
   }
 }
 
@@ -383,7 +382,7 @@ class Headline3 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.headline3!.merge(style));
+        style: context.textTheme.displaySmall!.merge(style));
   }
 }
 
@@ -511,7 +510,7 @@ class Headline4 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.headline4!.merge(style));
+        style: context.textTheme.headlineMedium!.merge(style));
   }
 }
 
@@ -639,7 +638,7 @@ class Headline5 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.headline5!.merge(style));
+        style: context.textTheme.headlineSmall!.merge(style));
   }
 }
 
@@ -767,7 +766,7 @@ class Headline6 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.headline6!.merge(style));
+        style: context.textTheme.titleLarge!.merge(style));
   }
 }
 
@@ -895,7 +894,7 @@ class Subtitle1 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.subtitle1!.merge(style));
+        style: context.textTheme.titleMedium!.merge(style));
   }
 }
 
@@ -1023,7 +1022,7 @@ class Subtitle2 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.subtitle2!.merge(style));
+        style: context.textTheme.titleSmall!.merge(style));
   }
 }
 
@@ -1151,7 +1150,7 @@ class BodyText1 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.bodyText1!.merge(style));
+        style: context.textTheme.bodyLarge!.merge(style));
   }
 }
 
@@ -1279,7 +1278,7 @@ class BodyText2 extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.bodyText2!.merge(style));
+        style: context.textTheme.bodyMedium!.merge(style));
   }
 }
 
@@ -1407,7 +1406,7 @@ class CaptionText extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.caption!.merge(style));
+        style: context.textTheme.bodySmall!.merge(style));
   }
 }
 
@@ -1535,7 +1534,7 @@ class ButtonText extends StatelessWidget {
         strutStyle: strutStyle,
         textWidthBasis: textWidthBasis,
         semanticsLabel: semanticsLabel,
-        style: context.textTheme.button!.merge(style));
+        style: context.textTheme.labelLarge!.merge(style));
   }
 }
 
@@ -1665,7 +1664,7 @@ class OverlineText extends StatelessWidget {
       strutStyle: strutStyle,
       textWidthBasis: textWidthBasis,
       semanticsLabel: semanticsLabel,
-      style: context.textTheme.overline!.merge(style),
+      style: context.textTheme.labelSmall!.merge(style),
     );
   }
 }

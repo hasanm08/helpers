@@ -9,7 +9,6 @@ class AnimatedInteractiveViewer extends StatefulWidget {
     this.curve = Curves.ease,
     this.duration = const Duration(milliseconds: 200),
     this.clipBehavior = Clip.none,
-    this.alignPanAxis = false,
     this.boundaryMargin = EdgeInsets.zero,
     this.constrained = true,
     this.panEnabled = true,
@@ -42,19 +41,6 @@ class AnimatedInteractiveViewer extends StatefulWidget {
   ///
   /// Defaults to [Clip.hardEdge].
   final Clip clipBehavior;
-
-  /// If true, panning is only allowed in the direction of the horizontal axis
-  /// or the vertical axis.
-  ///
-  /// In other words, when this is true, diagonal panning is not allowed. A
-  /// single gesture begun along one axis cannot also cause panning along the
-  /// other axis without stopping and beginning a new gesture. This is a common
-  /// pattern in tables where data is displayed in columns and rows.
-  ///
-  /// See also:
-  ///  * [constrained], which has an example of creating a table that uses
-  ///    alignPanAxis.
-  final bool alignPanAxis;
 
   /// A margin for the visible boundaries of the child.
   ///
@@ -478,7 +464,7 @@ class _AnimatedInteractiveViewerState extends State<AnimatedInteractiveViewer>
       clipBehavior: widget.clipBehavior,
       constrained: widget.constrained,
       panEnabled: widget.panEnabled,
-      alignPanAxis: widget.alignPanAxis,
+      panAxis: PanAxis.aligned,
       boundaryMargin: widget.boundaryMargin,
       scaleEnabled: widget.scaleEnabled,
       child: GestureDetector(

@@ -114,23 +114,23 @@ class _NumericButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _NumericInheritedWidget _numeric =
+    final _NumericInheritedWidget numeric =
         _NumericInheritedWidget.of(context);
 
     return SplashTap(
       onTap:
-          number.title.isNotEmpty ? () => _numeric.onTap(number.title) : null,
-      shape: _numeric.style.buttonShape,
+          number.title.isNotEmpty ? () => numeric.onTap(number.title) : null,
+      shape: numeric.style.buttonShape,
       child: Container(
         alignment: Alignment.center,
-        width: _numeric.style.buttonWidth,
-        height: _numeric.style.buttonHeight,
-        padding: _numeric.style.buttonPadding,
+        width: numeric.style.buttonWidth,
+        height: numeric.style.buttonHeight,
+        padding: numeric.style.buttonPadding,
         child: number.child ??
             Text(
               number.title,
-              style: _numeric.style.style ??
-                  context.textTheme.bodyText1 ??
+              style: numeric.style.style ??
+                  context.textTheme.bodyLarge ??
                   const TextStyle(),
             ),
       ),
